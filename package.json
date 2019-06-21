@@ -1,0 +1,15 @@
+{
+  "name": "rps-game",
+  "version": "1.0.0",
+  "description": "Simple rock paper scissors game",
+  "main": "main.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Madeleine Woodbury",
+  "license": "ISC",
+  "homepage": "https://madeleinewoodbury.github.io/rock-paper-scissors",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
