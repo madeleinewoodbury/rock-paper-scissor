@@ -8,7 +8,7 @@
   },
   "author": "Madeleine Woodbury",
   "license": "ISC",
-  "homepage": "https://madeleinewoodbury.github.io/rock-paper-scissors",
+  "homepage": "https://madeleinewoodbury.github.io/rock-paper-scissor",
   "dependencies": {
     "gh-pages": "^2.0.1"
   }
