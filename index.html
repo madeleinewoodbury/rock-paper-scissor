@@ -17,11 +17,13 @@
     <div class="score-container">
       <div>
         <i class="fas fa-user"></i>
-        Your Score: <span id="player-score">0</span>
+        <span class="hide-sm">Your</span> Score:
+        <span id="player-score">0</span>
       </div>
       <div>
         <i class="fas fa-laptop"></i>
-        Computer Score: <span id="computer-score">0</span>
+        <span class="hide-sm">Computer</span> Score:
+        <span id="computer-score">0</span>
       </div>
     </div>
 
@@ -41,17 +43,15 @@
     <div class="modal">
       <div class="modal-container">
         <div id="modal-content">
-          <span class="close">&times;</span>
           <h2 id="modal-title"></h2>
-
           <div class="hands">
             <div class="player-hand">
-              <p>Your hand</p>
+              <p>You</p>
               <i id="modal-player-hand"></i>
             </div>
 
             <div class="player-hand">
-              <p>Computer hand</p>
+              <p>Computer</p>
               <i id="modal-computer-hand"></i>
             </div>
           </div>

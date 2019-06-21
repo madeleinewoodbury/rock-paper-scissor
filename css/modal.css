@@ -62,10 +62,18 @@
   color: rgb(255, 255, 255);
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
+@media screen and (max-width: 450px) {
+  #modal-content {
+    width: 90%;
+  }
+
+  #modal-content .hands {
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+
+  #modal-content .hands p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
 }
