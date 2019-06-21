@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/5e8b503d89.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <title>Rock | Paper | Scissors</title>
+  </head>
+  <body>
+    <header>
+      <h1>Rock | Paper | Scissor</h1>
+      <button id="restart-btn" class="btn">Restart Game</button>
+    </header>
+
+    <div class="score-container">
+      <div>
+        <i class="fas fa-user"></i>
+        <span class="hide-sm">Your</span> Score:
+        <span id="player-score">0</span>
+      </div>
+      <div>
+        <i class="fas fa-laptop"></i>
+        <span class="hide-sm">Computer</span> Score:
+        <span id="computer-score">0</span>
+      </div>
+    </div>
+
+    <div class="game-container">
+      <div class="rock">
+        <i class="fas fa-hand-rock fa-7x"></i>
+      </div>
+      <div class="paper">
+        <i class="fas fa-hand-paper fa-7x"></i>
+      </div>
+      <div class="scissor">
+        <i class="fas fa-hand-scissors fa-7x"></i>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal">
+      <div class="modal-container">
+        <div id="modal-content">
+          <h2 id="modal-title"></h2>
+          <div class="hands">
+            <div class="player-hand">
+              <p>You</p>
+              <i id="modal-player-hand"></i>
+            </div>
+
+            <div class="player-hand">
+              <p>Computer</p>
+              <i id="modal-computer-hand"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
