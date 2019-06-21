@@ -8,16 +8,12 @@ let restartBtn = document.querySelector('#restart-btn');
 const playerDisplay = document.querySelector('#player-score');
 const computerDisplay = document.querySelector('#computer-score');
 const gameContainer = document.querySelector('.game-container');
-let modal = document.querySelector('.modal');
-let modalContent = document.querySelector('#modal-content');
-let modalTitle = document.querySelector('#modal-title');
-let closeModal = document.querySelector('.close');
-let playerModalHand = document.querySelector('#modal-player-hand');
-let computerModalHand = document.querySelector('#modal-computer-hand');
-
-//
-// FUNCTIONS
-//
+const modal = document.querySelector('.modal');
+const modalContent = document.querySelector('#modal-content');
+const modalTitle = document.querySelector('#modal-title');
+const closeModal = document.querySelector('.close');
+const playerModalHand = document.querySelector('#modal-player-hand');
+const computerModalHand = document.querySelector('#modal-computer-hand');
 
 // Initialize a new game
 const initGame = () => {
@@ -27,6 +23,7 @@ const initGame = () => {
   updateScore();
 };
 
+// Determine winner
 const compareHands = (playerHand, compareHand) => {
   if (playerHand != compareHand) {
     if (playerHand == 'rock') {
@@ -106,7 +103,6 @@ gameContainer.addEventListener('click', e => {
     // Randomly select hand for computer
     computerHand = rps[Math.floor(Math.random() * rps.length)];
 
-    console.log(`Computer: ${computerHand}, Player: ${playerHand}`);
     compareHands(playerHand, computerHand);
   }
 });
