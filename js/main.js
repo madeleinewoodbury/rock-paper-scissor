@@ -1,12 +1,19 @@
 // Global variables
-const rps = ['ROCK', 'PAPER', 'SCISSOR'];
+const rps = ['rock', 'paper', 'scissors'];
 let playerHand;
 let computerHand;
 let playerScore;
 let computerScore;
+let restartBtn = document.querySelector('#restart-btn');
 const playerDisplay = document.querySelector('#player-score');
 const computerDisplay = document.querySelector('#computer-score');
 const gameContainer = document.querySelector('.game-container');
+let modal = document.querySelector('.modal');
+let modalContent = document.querySelector('#modal-content');
+let modalTitle = document.querySelector('#modal-title');
+let closeModal = document.querySelector('.close');
+let playerModalHand = document.querySelector('#modal-player-hand');
+let computerModalHand = document.querySelector('#modal-computer-hand');
 
 //
 // FUNCTIONS
@@ -22,20 +29,20 @@ const initGame = () => {
 
 const compareHands = (playerHand, compareHand) => {
   if (playerHand != compareHand) {
-    if (playerHand == 'ROCK') {
-      if (computerHand != 'PAPER') {
+    if (playerHand == 'rock') {
+      if (computerHand != 'paper') {
         playerWins();
       } else {
         computerWins();
       }
-    } else if (playerHand == 'PAPER') {
-      if (computerHand != 'SCISSOR') {
+    } else if (playerHand == 'paper') {
+      if (computerHand != 'scissors') {
         playerWins();
       } else {
         computerWins();
       }
     } else {
-      if (computerHand != 'ROCK') {
+      if (computerHand != 'rock') {
         playerWins();
       } else {
         computerWins();
@@ -47,19 +54,34 @@ const compareHands = (playerHand, compareHand) => {
 };
 
 const computerWins = () => {
-  console.log('Computer Wins!');
   computerScore += 1;
   updateScore();
+
+  modalTitle.textContent = 'You Lose...';
+  modalContent.className = 'bg-loose';
+  displayModal();
 };
 
 const playerWins = () => {
-  console.log('Player Wins!');
   playerScore += 1;
   updateScore();
+
+  modalTitle.textContent = 'You Win!!!';
+  modalContent.className = 'bg-win';
+  displayModal();
 };
 
 const tie = () => {
-  console.log("It's a tie!!!");
+  modalTitle.textContent = "It's a tie!";
+  modalContent.className = 'bg-tie';
+  displayModal();
+};
+
+const displayModal = () => {
+  playerModalHand.className = `fas fa-hand-${playerHand} fa-7x`;
+  computerModalHand.className = `fas fa-hand-${computerHand} fa-7x`;
+
+  modal.style.display = 'block';
 };
 
 const updateScore = () => {
@@ -88,5 +110,21 @@ gameContainer.addEventListener('click', e => {
     compareHands(playerHand, computerHand);
   }
 });
+
+// Close the modal
+modal.onclick = e => {
+  if (
+    e.target.classList.contains('modal-container') ||
+    e.target.classList.contains('close')
+  ) {
+    modal.style.display = 'none';
+  }
+};
+
+// Restart Game
+restartBtn.onclick = e => {
+  // window.location.reload(true);
+  initGame();
+};
 
 initGame();

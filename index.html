@@ -27,13 +27,35 @@
 
     <div class="game-container">
       <div class="rock">
-        <i class="fas fa-hand-rock fa-8x"></i>
+        <i class="fas fa-hand-rock fa-7x"></i>
       </div>
       <div class="paper">
-        <i class="fas fa-hand-paper fa-8x"></i>
+        <i class="fas fa-hand-paper fa-7x"></i>
       </div>
       <div class="scissor">
-        <i class="fas fa-hand-scissors fa-8x"></i>
+        <i class="fas fa-hand-scissors fa-7x"></i>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal">
+      <div class="modal-container">
+        <div id="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modal-title"></h2>
+
+          <div class="hands">
+            <div class="player-hand">
+              <p>Your hand</p>
+              <i id="modal-player-hand"></i>
+            </div>
+
+            <div class="player-hand">
+              <p>Computer hand</p>
+              <i id="modal-computer-hand"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
